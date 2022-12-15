@@ -1,0 +1,149 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: Verdana, 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif, Tahoma, sans-serif, Geneva, Tahoma, sans-serif, Georgia, Times, 'Times New Roman', serif
+	
+
+}
+
+body {
+	background-image: url('milad-fakurian-dQDDMWgvotg-unsplash.jpg');
+	background-size: cover;
+	background-attachment: fixed;
+	display: flex;
+	height: 100vh;
+	justify-content: center;
+	align-items: center;
+ }
+
+ #Prijava{
+	left:10px;
+ }
+ #Registracija{
+	left: 600px;
+ }
+
+ .form-box{
+    width: 600px;
+    height: 700px;
+    margin: auto;
+    position: sticky; 
+    border-radius: 25px;
+	backdrop-filter: blur(5px);
+	background: rgba(0, 0, 0, 0.5);
+	box-shadow: 0 8px 32px 0 rgba(0,0,0,0.5);
+	border: solid 2px rgba(255,255,255,0.027);
+	color: white;
+    padding: 0px;
+    overflow: hidden;
+
+ }
+ .button-box
+{
+	width:270px;
+	margin:45px auto;
+	position:relative;
+	box-shadow: 0 0 20px 9px #ffffff1f;
+	border-radius: 30px;
+}
+.toggle-btn
+{
+	padding:20px 30px;
+	cursor:pointer;
+	background:transparent;
+	border:0;
+	outline: none;
+	position: relative;
+    color: #fff;
+    font-weight:bold ;
+    
+}
+#btn
+{
+	top: 0;
+	left:0;
+	position: absolute;
+	width: 137px;
+	height: 100%;
+	background: #d993f3a9;
+	border-radius: 30px;
+	transition: .5s;
+    
+}
+
+.input-group-login
+{
+	top: 200px;
+	position:absolute;
+	width:300px;
+	transition:.5s;
+
+}
+.input-group-register
+{
+    top: 120px;
+	position:absolute;
+	width:300px;
+	transition:.5s;
+}
+.input-field
+{
+    height: 45px;
+	width: 120%;
+	outline: none;
+	border-radius: 10px;
+	border: 1px solid #ccc;
+	padding-left: 15px;
+	font-size: 16px;
+	border-bottom-width: 2px;
+	transition: all 0.3 ease;
+    font-size: 16px;
+	margin-bottom: 10px;
+}
+.submit-btn
+{
+	width: 85%;
+    font-weight: bold;
+    position: absolute;
+    left: 20%;
+	padding: 20px;
+	cursor: pointer;
+	display: block;
+	margin: auto;
+	background: #d993f3a9;
+	border: 0;
+	outline: none;
+	border-radius: 30px;
+    text-align:center;
+    color: #fff;
+    display:flex;
+	justify-content: center; 
+    font-size: 18px;
+}
+.details{
+    display: block;
+	font-weight: 500;
+	margin-bottom: 5px;
+    font-size: 20px;
+
+
+}
+.check-box
+{
+	margin: 30px 10px 34px 0;
+	margin-top: 0px;
+}
+
+#Prijava{
+    left: 100px;
+}
+#Registracija{
+    left:1000px;
+
+
+}
+.submit-btn:hover{
+	background: #e0a8f5a9;
+}
+

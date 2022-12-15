@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="sl">
+	<head>
+	<title>Webcastv</title>
+		<meta charset="UTF-8">
+		 <link rel="stylesheet" href="obrazecc.css" type="text/css" />
+         <link rel="icon" href="favicon.ico" type="image/x-icon">
+         
+
+		
+	</head>
+		
+		
+		<body>
+   
+			<div id="login-form" form class="login-page">
+                <div class="form-box">
+                    <div class="button-box">
+                        <div id="btn"></div>
+                        <button type="button" class="toggle-btn" onclick="Prijava()">Prijava</button>
+                        <button type="button" class="toggle-btn" onclick="Registracija()">Registracija</button>
+                    </div>
+                    <form id='Prijava' class='input-group-login' autocomplete="off">
+                        <span class="details">Uporabniško ime
+                            <input type='text'class='input-field'id="uporabime"maxlength="35" placeholder='Vnesite uporabniško ime' required >
+                        </span>
+                        <span class="details">Geslo
+                            <input type='password'id="passwrd" class='input-field'maxlength="35"placeholder='Vnesite geslo' required>
+                        </span>
+                            <input type='checkbox'class='check-box'><span>(Zapomni si geslo)</span>
+                <button type='submit'class='submit-btn' onclick="validate(); get();">Prijava</button>
+             </form>
+             <form id='Registracija' class='input-group-register' autocomplete="off">
+                <span class="details">Celotno ime
+                    <input type='text'class='input-field'id="celotnoime"placeholder='Ime'maxlength="35" required>
+                </span>
+                <span class="details">Uporabniško ime
+                    <input type='text'class='input-field'id="upime"placeholder='vnesite uporabnisko ime'maxlength="35" required>
+                </span>
+                <span class="details">E-pošta
+                    <input type='email'class='input-field' id="email"placeholder='E-pošta' maxlength="35" required>
+                </span>
+                <span class="details">Geslo
+                    <input type='password'class='input-field'id="geslo"placeholder='Geslo' maxlength="35" required>
+                </span>
+                <span class="details">Potrdi Geslo
+                    <input type='password'class='input-field'id="potrdigeslo"onkeyup="check()" placeholder='Potrdi geslo' maxlength="35"  required>
+                </span><span id='message'></span>
+                <span class="details">
+
+                </span>
+                 <input type='checkbox'class='check-box' required><span>(Strinjam se s pravili in pogoji)</span>
+                        <button type='submit'class='submit-btn' onlick="save()">Registracija</button>
+                 </form>
+        </div> 
+	</div>
+    <script>
+
+        var x=document.getElementById("Prijava");
+        var y=document.getElementById("Registracija");
+        var z=document.getElementById("btn");
+
+        function Registracija(){
+        x.style.left="-1000px";
+        y.style.left="100px";
+        z.style.left="131px";
+
+        }
+        function Prijava(){
+            x.style.left="100px";
+            y.style.left="1000px";
+            z.style.left="0px";
+
+        }
+
+        function save(){
+            var up=document.getElementById("upime");
+            localStorage.setItem("uime",upime.value);
+            var gslo=document.getElementById("potrdigeslo");
+            localStorage.setItem("passconf",potrdigeslo.value);
+            
+
+        }
+        function validate(){
+            var uporabnisko=document.getElementById("uporabime");
+            localStorage.setItem("uimep",uporabnisko.value);
+            var passwd=document.getElementById("passwrd");
+            localStorage.setItem("passwsd",passwd.value);
+
+        }
+
+        
+        function get(){
+            var d=localStorage.getItem("uime");
+            var r=localStorage.getItem("passconf");
+            var i=localStorage.getItem("up");
+            var j=localStorage.getItem("gslo");
+
+           if(d == i && r == j){
+            alert("prijava uspesna");
+
+           }
+           else{
+            alert("prijava neuspesna");
+           }
+           
+        }
+        var check = function() {
+        if (document.getElementById('geslo').value ==
+            document.getElementById('potrdigeslo').value) {
+            document.getElementById('message').style.color = 'green';
+            document.getElementById('message').innerHTML = 'gesla se ujemata';
+        } else {
+            document.getElementById('message').style.color = 'red';
+            document.getElementById('message').innerHTML = 'gesla se ne ujemata';
+        }
+    }
+
+     
+    </script>
+				
+
+		</body>
+</html>
